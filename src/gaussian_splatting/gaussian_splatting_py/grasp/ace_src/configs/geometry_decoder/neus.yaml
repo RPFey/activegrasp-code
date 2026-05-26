@@ -1,0 +1,14 @@
+type: rendered_depth
+
+decoder_input: None  # {pos, None}
+
+n_pts_per_ray: 64
+n_importance: 32
+up_sample_steps: 4
+n_rays: 128
+sample_range: 0.05  # currently not used
+
+loss_depth_img_weight: 1.0
+loss_eik_weight: 0.02  # 0.01 for ponder
+loss_near_weight: 0.0  # 10 for ponder
+loss_free_weight: 0.0  # 1.0 for ponder

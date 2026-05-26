@@ -1,0 +1,28 @@
+<launch>
+    <!-- Include the first launch file -->
+    <include file="$(find kortex_driver)/launch/kortex_driver.launch">
+        <arg name="gripper" value="robotiq_2f_85"/>
+    </include>
+    <!-- Include the second launch file -->
+    <include file="$(find kinova_vision)/launch/kinova_vision.launch"/>
+
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="realsense_cam" args="-0.011931 -0.038901 0.029404 0.012758 -0.008384 0.999881 -0.002114 camera_color_frame realsense_color_frame" /> -->
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="realsense_cam" args="-0.013684 -0.018881 0.024418 0.013833 -0.026454 0.999553 -0.001635 camera_color_frame realsense_color_frame" /> -->
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="realsense_cam" args="-0.011624 -0.037286 0.033464 0.012588 0.043485 0.998968 -0.003602 camera_color_frame realsense_color_frame" /> -->
+    
+    <node pkg="tf2_ros" type="static_transform_publisher" name="realsense_cam" args="0.01249326 0.0905619 -0.10137757 0.02710676 0.00440886 0.01050461 0.99956763 tool_frame realsense_color_frame" />
+    
+    <node pkg="tf2_ros" type="static_transform_publisher" name="digit_cam_left" args="0.0031281  -0.01688062  0.01592279 0 0 0 1 left_inner_finger_pad digit_left" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="digit_cam_right" args="0.0062473  -0.001865373  0.02062168 0.00100309  0.70829334 -0.70574603  0.01555874 right_inner_finger_pad digit_right" />
+
+    <!-- The four vertex of the finger panel, for calibration -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="finger_upper_left" args="0.01 -0.0035 0.018  0 0 0 1 right_inner_finger_pad right_inner_upper_left" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="finger_upper_right" args="0.01 0.0035 0.018  0 0 0 1 right_inner_finger_pad right_inner_upper_right" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="finger_lower_left" args="-0.01 -0.0035 0.018  0 0 0 1 right_inner_finger_pad right_inner_lower_left" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="finger_lower_right" args="-0.01 0.0035 0.018  0 0 0 1 right_inner_finger_pad right_inner_lower_right" />
+
+    <!-- <include file="$(find voxblox_ros)/launch/realsense.launch"/> -->
+
+    <!-- <include file="$(find DenseTactNode)/launch/dt.launch"/> -->
+
+</launch>

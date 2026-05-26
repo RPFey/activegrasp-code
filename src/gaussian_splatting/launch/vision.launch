@@ -1,0 +1,29 @@
+<launch>
+    <arg name="depth_topic" default="/image" />
+    <arg name="image_topic" default="/image" />
+    <arg name="cam_info_topic" default="/cam_info" />
+    <arg name="depth_info_topic" default="/depth_info" />
+    <arg name="touch_config" default="config/digit.yaml" />
+    <arg name="save_data" default="False" />
+    <arg name="save_data_dir" default="/home/user/Documents/data" />
+
+    <!-- Launch the example in that namespace -->
+    <node name="vision_node" pkg="gaussian_splatting" type="vision_node.py" output="screen">
+        <param name="image_topic" value="$(arg image_topic)"/>
+        <param name="depth_topic" value="$(arg depth_topic)"/>
+        <param name="depth_info_topic" value="$(arg depth_info_topic)"/>
+        <param name="cam_info_topic" value="$(arg cam_info_topic)"/>
+        <param name="save_data" value="$(arg save_data)"/>
+        <param name="touch_config" value="$(arg touch_config)"/>
+        <param name="save_data_dir" value="$(arg save_data_dir)"/>
+
+        <!-- Depth Anything V2 Model -->
+        <param name="depth_encoder" value="vitl"/>
+        <param name="depth_model_path" value="$(find gaussian_splatting)/weights/depth_anything_v2_vitl.pth"/>
+    </node>
+
+    <!-- Launch the depth image subscriber -->
+    <include file="$(find gaussian_splatting)/launch/digit.launch">
+    </include>
+
+</launch>

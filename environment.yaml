@@ -1,0 +1,21 @@
+name: grasp
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - cmake=3.27
+  - python=3.11
+  - suitesparse==7.10.1
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - nvidia/label/cuda-12.1.0::cuda-toolkit
+  - nvidia/label/cuda-12.1.0::cuda-nvtx
+  - conda-forge::eigen
+  - conda-forge::boost
+  - anaconda::git-lfs
+  - ca-certificates
+  - numpy==1.26.4
+  - mkl 
+  - mkl-include

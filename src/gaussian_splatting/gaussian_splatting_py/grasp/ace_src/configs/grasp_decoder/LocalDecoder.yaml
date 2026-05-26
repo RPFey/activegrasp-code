@@ -1,0 +1,9 @@
+decoder_input: dir  # {pos, dir, pos+dir, None}
+
+sample_mode: 'bilinear'
+hidden_size: 32
+concat_feat: True
+expand_sample_pts: [2, 2, 2, 0.25, 0.1]  # x_num, y_num, z_num, step, along_ray_step(enable if > 0)
+# expand_sample_pts: [3, 3, 2, 0.1, 0]
+# expand_sample_pts: [0, 0, 0, 0, 0.1]
+# expand_sample_pts: [0, 0, 0, 0.1, 0]  # all off, only use the original sample points

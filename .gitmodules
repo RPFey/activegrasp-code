@@ -1,0 +1,6 @@
+[submodule "src/orocos_kinematics_dynamics"]
+	path = src/orocos_kinematics_dynamics
+	url = https://github.com/orocos/orocos_kinematics_dynamics.git
+[submodule "src/kdl_parser"]
+	path = src/kdl_parser
+	url = https://github.com/ros/kdl_parser.git

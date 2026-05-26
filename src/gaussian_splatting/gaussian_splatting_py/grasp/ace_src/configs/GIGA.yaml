@@ -1,0 +1,14 @@
+net: "giga"
+dataset: /mnt/petrelfs/sftp-src/data_packed_train_processed_dex_noise
+dataset_raw: /mnt/petrelfs/sftp-src/data_packed_train_raw
+description: ""  # 实验备注（体现在文件夹名称）
+savedir: ""  # 覆盖文件夹名称
+epochs: 10
+batch_size: 32
+learning_rate: 2e-5
+val_split: 0.1
+log_interval: 10  # iteration
+logdir: "experiments"
+augment: False
+silence: False  # 命令行 progressbar
+load_path: ''

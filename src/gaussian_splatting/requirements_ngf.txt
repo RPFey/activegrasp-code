@@ -1,0 +1,16 @@
+colorama==0.4.4
+# graspnetAPI @ git+https://github.com/graspnet/graspnetAPI.git
+matplotlib
+# MinkowskiEngine==0.5.4
+numpy<2.0.0
+open3d
+opencv-python
+packaging==21.3
+Pillow
+PyYAML
+scikit-image
+scipy
+# setuptools==61.2.0; 69.5.1 main version
+tqdm
+trimesh # 4.2.2 main version
+pytorch3d @ git+https://github.com/facebookresearch/pytorch3d.git

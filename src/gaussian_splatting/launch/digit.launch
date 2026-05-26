@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="digit_node" pkg="gaussian_splatting" type="digit_node.py" output="screen">
+        <param name="model_path" value="$(find gaussian_splatting)/weights/digit.pth"/>
+        <param name="config_path" value="$(find gaussian_splatting)/config/digit.yaml"/>
+        <param name="base_img_path" value="$(find gaussian_splatting)/weights/background.png"/>
+    </node>
+
+</launch>

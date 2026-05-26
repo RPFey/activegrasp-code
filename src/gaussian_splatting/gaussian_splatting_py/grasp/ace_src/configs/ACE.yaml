@@ -1,0 +1,37 @@
+defaults:
+  - hydra: my_hydra
+  - encoder: LocalVoxelEncoder
+  - geometry_decoder: neus
+  - grasp_decoder: LocalDecoder
+  - _self_
+
+# dataset
+dataset: ["/home/henrik/Documents/ACE_NBV/data/set/data_facing_grasp_100",
+          "/home/henrik/Documents/ACE_NBV/data/set/data_multiview_grasp_100",
+          "/home/henrik/Documents/ACE_NBV/data/set/data_side_grasp_100"]
+num_workers: 16  # for CUDA
+
+# experiment
+device: ???
+log: True
+log_interval: 10  # iteration
+save_interval: 4000
+full_image_interval: 2000
+mesh_interval: 4000
+
+# network
+net: "ace"
+load_path: ''
+# load_path: '/mnt/petrelfs/active_grasp/ActiveGrasp/experiments/2023-04-27-15-17-01/ckpts/ckpt_epoch_00_00000.pt'
+padding: 0.0
+decoder_padding: 0.0  # 输入(-0.5~0.5) -> feature -> 输出(-0.5~0.5)/(1 + decoder_padding)
+
+# training
+epochs: 10
+batch_size: 16
+learning_rate: 2e-5
+val_split: 0.1
+
+# misc
+augment: False
+silence: False  # 命令行 progressbar

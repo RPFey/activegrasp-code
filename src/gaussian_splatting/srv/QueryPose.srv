@@ -1,0 +1,7 @@
+string method
+string datadir
+---
+bool success
+string message
+geometry_msgs/PoseStamped[] poses
+float64[] scores

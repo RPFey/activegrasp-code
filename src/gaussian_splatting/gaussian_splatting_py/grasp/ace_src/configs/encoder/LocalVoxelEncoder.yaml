@@ -1,0 +1,3 @@
+type: voxel_simple_local
+c_dim: 32
+plane_resolution: 40

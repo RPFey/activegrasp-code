@@ -1,0 +1,7 @@
+run:
+  dir: ./experiments/${now:%Y-%m-%d-%H-%M-%S}
+sweep:
+  dir: ./experiments/${now:%Y-%m-%d-%H-%M-%S-multirun}
+job:
+  chdir: True
+output_subdir: configs

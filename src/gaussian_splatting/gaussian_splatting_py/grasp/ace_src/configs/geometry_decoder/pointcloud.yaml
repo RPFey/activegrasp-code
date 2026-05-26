@@ -1,0 +1,3 @@
+type: occupancy
+
+decoder_input: None  # {pos, None}

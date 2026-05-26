@@ -1,0 +1,37 @@
+<launch>
+
+
+    <!-- Robot namespace -->
+    <arg name="robot_name" default="my_gen3"/>
+    <arg name="start_delay_seconds" default="0"/>
+
+    <arg name="image_topic" default="/camera/rgb/image_raw" />
+    <arg name="cam_info_topic" default="/camera/rgb/camera_info" />
+
+    <arg name="depth_image_topic" default="/camera/depth/image_raw" />
+    <arg name="depth_cam_info_topic" default="/camera/rgb/camera_info" />
+    <arg name="save_data_dir" default="/root/data" />
+
+    <!-- contact_graspnet ; se3diff -->
+    <arg name="grasp_model" default="se3diff"/>
+
+    <node name="vision_node" pkg="gaussian_splatting" type="vision_node.py" output="screen">
+        <param name="image_topic" value="$(arg image_topic)"/>
+        <param name="depth_topic" value="$(arg depth_image_topic)"/>
+        <param name="depth_info_topic" value="$(arg depth_cam_info_topic)"/>
+        <param name="cam_info_topic" value="$(arg cam_info_topic)"/>
+        <param name="save_data" value="True"/>
+        <param name="save_data_dir" value="$(arg save_data_dir)"/>
+        <param name="grasp_model_path" value="$(find gaussian_splatting)/weights/vgn_conv.pth"/>
+        <param name="view_selection_method" value="Breyer"/>
+    </node>
+
+    <!-- Launch the controller node -->
+    <node name="curobo_controller" pkg="kinova_control" type="curobo_controller.py" output="screen" launch-prefix="bash -c 'sleep $(arg start_delay_seconds); $0 $@' ">
+        <param name="grasp_model" value="$(arg grasp_model)"/>
+    </node>
+
+    <!-- run rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kinova_control)/config/curobo_pybullet.rviz" required="true" output="screen"/>
+
+</launch>

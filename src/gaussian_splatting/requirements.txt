@@ -1,0 +1,100 @@
+# assume torch is already installed
+
+# pycolmap for data parsing
+git+https://github.com/rmbrualla/pycolmap@cc7ea4b7301720ac29287dbe450952511b32125e
+# (optional) nerfacc for torch version rasterization 
+# git+https://github.com/nerfstudio-project/nerfacc
+
+viser
+nerfview==0.0.2
+tqdm
+torchmetrics[image]
+tyro>=0.8.8
+Pillow
+tensorboard
+tensorly
+matplotlib
+git+https://github.com/rahul-goel/fused-ssim@1272e21a282342e89537159e4bad508b19b34157
+jaxtyping
+theseus-ai
+
+# for DINO
+supervision==0.25.1
+transformers==4.48.1
+
+# Foundation Pose Dependency
+includeigen==0.1
+
+# JupyterLab
+jupyterlab==4.1.5
+ipywidgets==8.1.2
+
+# Common Libraries
+numpy<2.0.0
+scipy==1.15.2
+scikit-learn==1.4.1.post1
+scikit-image==0.22.0
+pyyaml==6.0.1
+ruamel.yaml==0.18.6
+ninja==1.11.1.1
+h5py==3.10.0
+numba==0.59.1
+pybind11==2.12.0
+
+# CV Libraries
+imageio==2.34.0
+opencv-python==4.9.0.80
+opencv-contrib-python==4.9.0.80
+plotly==5.20.0
+open3d==0.18.0
+pyglet==1.5.28
+setuptools==69.5.1
+pysdf==0.1.9 
+
+# Trimesh
+trimesh==4.2.2
+xatlas==0.0.9
+rtree==1.2.0
+
+# PyRender
+pyrender==0.1.45
+pyOpenGL>=3.1.0
+pyOpenGL_accelerate>=3.1.0
+
+meshcat==0.3.2
+webdataset==0.2.86
+omegaconf==2.3.0
+pypng==0.20220715.0
+Panda3D==1.10.14
+simplejson==3.19.2
+bokeh==3.4.0
+roma==1.4.4
+seaborn==0.13.2
+pin==2.7.0
+openpyxl==3.1.2
+torchnet==0.0.4
+wandb==0.16.5
+colorama==0.4.6
+GPUtil==1.4.0
+imgaug==0.4.0
+xlsxwriter==3.2.0
+timm==0.9.16
+albumentations==1.4.2
+xatlas==0.0.9
+nodejs==0.1.1
+jupyterlab==4.1.5
+objaverse==0.1.7
+g4f==0.2.7.1
+ultralytics==8.0.120
+pycocotools==2.0.7
+py-spy==0.3.14
+videoio==0.2.8
+kornia==0.7.2
+einops==0.7.0
+transformations==2024.6.1
+joblib==1.3.2
+warp-lang==1.5.1
+
+# For PyTorch3D
+fvcore==0.1.5.post20221221
+Werkzeug==2.2.3
