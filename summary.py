@@ -187,4 +187,4 @@ if __name__ == '__main__':
     args.add_argument('--episode', type=int, default=-1)
     args = args.parse_args()
     
-    calibration = ConformalCalibration(args.root_dir, args.seed, args.episode)
+    calibration = ResultSummary(args.root_dir, args.seed, args.episode)

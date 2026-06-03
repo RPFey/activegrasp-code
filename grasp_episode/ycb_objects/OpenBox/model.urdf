@@ -1,0 +1,43 @@
+<?xml version="0.0" ?>
+<robot name="model.urdf">
+    <link name="baselink">
+        <contact>
+            <lateral_friction>0.3</lateral_friction>
+            <rolling_friction>0.001</rolling_friction>
+            <contact_cfm>0.0</contact_cfm>
+            <contact_erp>1.0</contact_erp>
+        </contact>
+        <inertial>
+            <pose frame=''>0.02 -0.01 0.01 0.0 0.0 0.0</pose>
+            <mass>0.665</mass>
+            <inertia>
+                <ixx>1e-3</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>1e-3</iyy>
+                <iyz>0</iyz>
+                <izz>1e-3</izz>
+            </inertia>
+        </inertial>
+        <visual name="visual">
+            <geometry>
+                <mesh>
+                    <mesh filename="open-cardboard-box.obj" scale="0.008 0.005 0.012"/>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>1 1 1 1</ambient>
+                <diffuse>1.00000 1.00000 1.000000 1</diffuse>
+                <specular>.5 .5 .5 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+        <collision name="collision" concave="yes">
+            <geometry>
+                <mesh>
+                    <mesh filename="open-cardboard-box.obj" scale="0.008 0.005 0.012"/>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+</robot>

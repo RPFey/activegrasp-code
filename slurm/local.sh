@@ -51,13 +51,13 @@ echo $(which python)
 for iter in {1..1}
 do
     python src/kinova_control/kinova_control_py/curobo_controller.py \
-        --ep_root ../grasp_episode \
+        --ep_root ./grasp_episode \
         --grasp_model ${GRASP_MODEL} \
-        --active_view 1 \
+        --active_view 2 \
         --active_method ${ACTIVE} \
         --episode ${EPISODE_ID} \
         --seed ${SEED} \
-        --H_lambda 0.001 \
-        --init_view 1 \
-        --data_root ${ws}/conformal_data_cu/${GRASP_MODEL}_${ACTIVE}_H_lambda1e-3/s${SEED}-ep${EPISODE_ID}/iter${iter}
+        --H_lambda 0.0001 \
+        --init_view 2 \
+        --data_root ${ws}/../grasp_data_cu/${GRASP_MODEL}_${ACTIVE}_H_lambda1e-4/s${SEED}-ep${EPISODE_ID}/iter${iter}
 done

@@ -25,7 +25,7 @@ Quick Setup for `diff-eig`, `FoundationPose`, `Contact Grasp Net`, `ROS`, `Reals
 ```bash
 mkdir -p ws/ActiveGrasp
 cd ws/ActiveGrasp
-git clone git@github.com:RPFey/activegrasp-code.git activegrasp
+git clone -recursive https://github.com/RPFey/activegrasp-code.git activegrasp
 cd activegrasp
 
 conda env create -f environment.yaml
@@ -79,9 +79,14 @@ TORCH_CUDA_ARCH_LIST="9.0" python3.11 -m pip install . -v
 
 ### Simulator (Pybullet)
 
+To run a single environment:
 ```bash
-bash slurm/local.sh -s 0 -e 0 --grasp se3diff_dual --active FisherGrasp
+bash slurm/local.sh -s 0 -e 2 --grasp se3diff_dual --active FisherGrasp
+```
 
+To run the full evaluation:
+```bash
+bash slurm/launch-local.sh
 ```
 
 ### Real World (Kinova)
