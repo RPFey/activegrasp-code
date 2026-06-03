@@ -1,6 +1,6 @@
 # 🤖 ActiveGrasp: Information-Guided Active Grasping with Calibrated Energy-based Model
 
-###  [Boshu Lei*](https://scholar.google.com/citations?user=Jv88S-IAAAAJ&hl=en/), [Aiden Swann](https://aidenswann.com/), [Wen Jiang](https://jiangwenpl.github.io/), [Kostas Daniilidis](https://www.cis.upenn.edu/~kostas/)
+###  [Boshu Lei*](https://scholar.google.com/citations?user=Jv88S-IAAAAJ&hl=en/), [Wen Jiang*](https://jiangwenpl.github.io/), [Kostas Daniilidis](https://www.cis.upenn.edu/~kostas/)
 
 _Accepted by IEEE Computer Vision and Pattern Recognition (CVPR) 2026_
 
