@@ -1,6 +1,8 @@
-# Active Grasp Project 
+# 🤖 ActiveGrasp: Information-Guided Active Grasping with Calibrated Energy-based Model
 
-This is the official implementation of paper **ActiveGrasp: Information-Guided Active Grasping with Calibrated Energy-based Model**
+###  [Boshu Lei*](https://scholar.google.com/citations?user=Jv88S-IAAAAJ&hl=en/), [Aiden Swann](https://aidenswann.com/), [Wen Jiang](https://jiangwenpl.github.io/), [Kostas Daniilidis](https://www.cis.upenn.edu/~kostas/)
+
+_Accepted by IEEE Computer Vision and Pattern Recognition (CVPR) 2026_
 
 ## Docker 
 
@@ -119,11 +121,4 @@ x: forward
          |  /
          | /
 y <______|/
-```
-
-### Running viewers to check collected data:
-
-```bash
-cd src/gaussian_splatting
-python gaussian_splatting_py/cam_viewer.py ~/data/first_touch --share
 ```
