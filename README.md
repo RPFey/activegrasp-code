@@ -31,7 +31,7 @@ Quick Setup for `diff-eig`, `FoundationPose`, `Contact Grasp Net`, `ROS`, `Reals
 ```bash
 mkdir -p ws/ActiveGrasp
 cd ws/ActiveGrasp
-git clone -recursive https://github.com/RPFey/activegrasp-code.git activegrasp
+git clone -b main --recursive https://github.com/RPFey/activegrasp-code.git activegrasp
 cd activegrasp
 
 conda env create -f environment.yaml
