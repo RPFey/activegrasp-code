@@ -1,6 +1,10 @@
 # Active Grasp Project 
 
+This is the official implementation of paper **ActiveGrasp: Information-Guided Active Grasping with Calibrated Energy-based Model**
+
 ## Docker 
+
+We highly recommend using docker for running the experiments.
 
 ```bash
 docker run --privileged -it \
@@ -16,7 +20,7 @@ docker run --privileged -it \
         -e "TERM=xterm-256color" \
         --cap-add SYS_ADMIN --device /dev/fuse \
         --gpus all \
-        peasant98/dexterous_manipulation_desktop:latest \
+        boshuuu/vnc-cuda:cuda-12.1-devel-ubuntu20.04-gl-ros-noetic \
         bash
 ```
 
