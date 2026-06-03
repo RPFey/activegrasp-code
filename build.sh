@@ -290,7 +290,7 @@ function se3diff_setup {
         rm -rf grasp_diffusion
     fi
 
-    git clone git@github.com:RPFey/calibrate_grasp_diffusion.git grasp_diffusion
+    git clone https://github.com/RPFey/calibrate_grasp_diffusion.git grasp_diffusion
     cd grasp_diffusion
     MAX_JOBS=4 python3 -m pip install -r requirements.txt
     python3 -m pip install -e .
@@ -299,6 +299,10 @@ function se3diff_setup {
     echo "Download Model Weights"
     mkdir data && cd data
     git clone https://huggingface.co/camusean/grasp_diffusion models
+
+    cd models
+    gdown --id 1cLJNzMmuLqqMtqRfoETnaeehcJhR2JG9
+    unzip multiobject_scene_graspdif_dual.zip
 }
 
 function vgn_setup {
